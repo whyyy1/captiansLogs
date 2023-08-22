@@ -4,6 +4,7 @@ export default function Index({ log }) {
     console.log(log)
   return (
     <div>
+        <h1>Captain's Logs</h1>
         {log.map((entry) => {
             // console.log(entry.createdAt.toLocaleString())
             return(

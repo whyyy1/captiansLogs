@@ -17,8 +17,13 @@ module.exports.new = (req,res) => {
 }
 
 module.exports.delete = async (req, res) => {
-    await logsModel.findByIdAndDelete(req.params.id)
-    res.redirect('/logs')
+    try{
+        await logsModel.findByIdAndDelete(req.params.id)
+        res.redirect('/logs')
+    }
+   catch(e){
+    console.log('hey')
+   }
 }
 
 module.exports.update = async (req, res) => {
